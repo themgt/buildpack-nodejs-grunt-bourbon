@@ -193,8 +193,8 @@ if [ -f $BUILD_DIR/grunt.js ] || [ -f $BUILD_DIR/Gruntfile.js ] || [ -f $BUILD_D
   run_npm "install grunt-cli"
   run_npm "install grunt"
 
-  echo "-----> Found Gruntfile, running grunt heroku:$NODE_ENV task"
-  $BUILD_DIR/node_modules/.bin/grunt heroku:$NODE_ENV
+  echo "-----> Found Gruntfile, running grunt $GRUNT_TASKS task(s)"
+  $BUILD_DIR/node_modules/.bin/grunt $GRUNT_TASKS
 else
   echo "-----> No Gruntfile (grunt.js, Gruntfile.js, Gruntfile.coffee) found"
 fi
